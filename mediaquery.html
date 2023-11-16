@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: aqua;
+            height:400px;
+            width: 400px;
+            border: 3px solid black;
+        }
+        /* min width matlab 500px se upar jaate hie color change kar dunga */
+        /* @media (min-width:500px) {
+            .box{
+background-color:green;
+            }
+            
+        } */
+        /* matlab max 500 ke uper color change hoga */
+        /* @media (max-width:500px) {
+            .box{
+background-color:green;
+            }
+            
+        } */
+        /* range  mei bhi kar sakte hai*/
+        @media (min-width:300px)and (max-width:500px){
+            .box{
+background-color:green;
+            }
+            
+        }
+    </style>
+</head> 
+<body>
+    <!-- A media query is nothing but a tool it changes according to its display sixe -->
+    <div class="box"> HI BRO</div>
+    
+</body>
+</html>

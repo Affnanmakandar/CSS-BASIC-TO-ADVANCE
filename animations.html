@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            /* overflow kam karne ke liye use hota hai */
+            box-sizing: border-box;
+        }
+        .container{
+width: 100vw;
+height:100vh ;
+background-color: beige;
+border: 5px solid black;
+        }
+        .box{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            /* isse borders ko round kar sakte hai */
+            border-radius: 10px; 
+            margin: 10px;
+            border: 3px solid yellow;
+            /* animation ka name rakh skte hai search on mdn */
+            /* position: relative;
+            animation-name: rightmovement; */
+            /* time kitna lagega toh ye property use hogi */
+            /* animation-duration: 5s; */
+            /* kitne baar karna hei toh ye property use hogi */
+            /* animation-iteration-count: 2; */
+            /* kitne time yaani kitne seconds ruku toh ye property use hogi */
+            /* animation-delay: 2s; */
+            /* you can search on w3 school  for more syntax*/
+            /* start aur end ki speed equal ho toh ye property use hogi */
+            /* animation:linear; */
+        /* same aise hie aur properties hogi animation mei */
+        /* animation-timing-function: cubic-bezier(1,-0.4,1,1); */
+        /* animation direction se gayab nhi hoga  direction control kar sakte hai*/
+        /* animation-direction: alternate; */
+        
+        /* animation-iteration-count: 1; */
+        /* ek jagah stop karna hai toh jab box end mei jaayega toh */
+        /* animation-fill-mode: backwards; */
+        /* short hand nottation using animation */
+        /* /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+animation: 5s linear 1s 2 infinite alternate none running rightmovement;
+ 
+        }
+        @keyframes rightmovement {
+            /*  from matlab initial state kaha se  */
+            from{
+top: 0;
+left: 0;
+            }
+            /* to matlab kaha tak destination state */
+            to{
+top: 0;
+left: 1350px;
+            }
+        }
+        #box2{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px; 
+            margin: 10px;
+            border: 3px solid yellow; 
+            animation: 5s ease-in 1s 2 infinite alternate none running leftmovement;    
+        }
+        @keyframes leftmovement {
+            /*  from matlab initial state kaha se  */
+            from{
+top: 800px;
+left: 135px0;
+            }
+            /* to matlab kaha tak destination state */
+            to{
+top: 800px;
+left: 0px;
+            }
+        }
+        #circle{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 50px; 
+            margin: 10px;
+            border: 3px solid yellow;  
+            position: relative;
+            top: 240px;
+            left: 40%;
+            animation: 10s ease-in-out 0s  infinite alternate-reverse  none running circlemovement;
+                }
+                @keyframes circlemovement {
+            /* we want 4 state  */
+            /* start kar rhe hai */
+           0%{
+            top:1%;
+           left:5%
+           }
+           
+           30%{
+            top:5%;
+           left:90%
+           }
+           60%{
+            top:90%;
+           left:10%
+           }
+           100%{
+            top:95%;
+           left:90%
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<div class="box"></div>
+<div id="box2">
+
+</div>
+<div id="circle">
+
+</div>
+    </div>
+    
+</body>
+</html>

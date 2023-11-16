@@ -1,0 +1,45 @@
+.box{
+    width:400px;
+    height: 400px;
+    background-color: beige;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* smooth isne kiya transition ne */
+    transition: all 3s linear 1s;
+}
+.box:hover{
+    /* rotate isne kiya */
+    /* transform: rotate(360deg); */
+    /* transform scale se sixe bada ho jaata hai */
+    /* transform: scale(2); */
+    /* sixe decrease */
+    /* transform: scale(0.5); */
+    /* isse left side se ghoomega anti clock weise */
+    /* transform: rotate(-45deg); */
+    /* positive mei karenge toh clock wise matlab right se ghoomega */
+    /* isse tilt hoga */
+    /* transform: skew(45deg); */
+    /* mostly use */
+    /* translate matlab movement */
+    transform: translate(500px);
+/* -500px karte toh direction change hoga */
+/* y direction move karega matlab neeche ki taraf move karega */
+/* transform: translate(0px, 500px); */
+/* transform: translate(0px,-500px); */
+/* isse diagonally move karega */
+/* transform: translate(500px,500px); */
+transform: skewY(20deg);
+}
+p{
+    font-size: 36px;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
